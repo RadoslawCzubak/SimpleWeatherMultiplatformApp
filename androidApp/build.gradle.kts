@@ -22,7 +22,7 @@ android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
 
     defaultConfig {
-        applicationId = "com.myapplication.MyApplication"
+        applicationId = "pl.radoslav.simple_weather_multiplatfotm_app"
         minSdk = (findProperty("android.minSdk") as String).toInt()
         targetSdk = (findProperty("android.targetSdk") as String).toInt()
         versionCode = 1
@@ -34,5 +34,9 @@ android {
     }
     kotlin {
         jvmToolchain(11)
+    }
+
+    dependencies {
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     }
 }
